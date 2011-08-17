@@ -1,7 +1,7 @@
 StorageRoomKit
 =========================
 
-StorageRoomKit is an extension of the awesome RestKit (http://restkit.org, https://github.com/restkit/restkit) and provides helper methods and classes to make it easier to use RestKit with the StorageRoom API (http://storageroomapp.com).
+StorageRoomKit is an extension of the awesome RestKit (http://restkit.org and https://github.com/restkit/restkit) and provides helper methods and classes to make it easier to use RestKit with the StorageRoom API (http://storageroomapp.com).
 
 
 Main Features
@@ -107,6 +107,12 @@ Documentation
 Run "rake docs:install" to generate the AppleDoc from the source files and install it into Xcode.
 
 The StorageRoom API Documentation (http://storageroomapp.com/developers) contains further information about the web service.
+
+
+StorageRoom without StorageRoomKit
+-------------------------
+
+If you just need a small amount of content in your app and think this library is to heavy-weight you can also parse the JSON manually without StorageRoomKit. An example for this is on https://github.com/thriventures/simple_iphone_example.
 
 
 More Examples
