@@ -1,7 +1,7 @@
 StorageRoomKit
 =========================
 
-StorageRoomKit is an extension of the awesome RestKit (http://restkit.org and https://github.com/restkit/restkit) and provides helper methods and classes to make it easier to use RestKit with the StorageRoom API (http://storageroomapp.com).
+StorageRoomKit is an extension of the awesome RestKit (http://restkit.org + https://github.com/restkit/restkit) and provides helper methods and classes to make it easier to use RestKit with the StorageRoom API (http://storageroomapp.com).
 
 
 Main Features
@@ -11,7 +11,7 @@ Main Features
 * Supports the GET, POST, PUT and DELETE HTTP methods
 * Comes with classes and mappings for all StorageRoom Resources
 * Helper methods to generate StorageRoom paths
-* And many more handy features that RestKit offers
+* ... and many more handy features that RestKit offers
 
 
 Installation
@@ -46,12 +46,9 @@ Basic Usage
 This is a walkthrough with all steps for a simple usage scenario of the library.
 
 1. Import the headers
+
         #import <StorageRoomKit/StorageRoomKit.h>
         #import <StorageRoomKit/CoreData/CoreData.h> // optionally include CoreData
-
-1. Create the ObjectManager
-
-        [SRObjectManager objectManagerForAccountId:@"STORAGE_ROOM_ACCOUNT_ID" authenticationToken:@"AUTHENTICATION_TOKEN"];
 
 1. Add the SREntry protocol to your custom class
 
@@ -79,6 +76,10 @@ This is a walkthrough with all steps for a simple usage scenario of the library.
             return @"Announcement";
         }
 
+1. Create the ObjectManager
+
+        [SRObjectManager objectManagerForAccountId:@"STORAGE_ROOM_ACCOUNT_ID" authenticationToken:@"AUTHENTICATION_TOKEN"];
+
 1. Load resources from the API
 
         [[RKObjectManager sharedManager] loadObjectsAtResourcePath:SRCollectionEntriesPath(@"COLLECTION_ID") delegate:self];    
@@ -88,6 +89,7 @@ This is a walkthrough with all steps for a simple usage scenario of the library.
         - (void)objectLoader:(RKObjectLoader *)anObjectLoader didLoadObject:(Announcement *)anAnnouncement {
             self.announcementLabel.text = anAnnouncement.text;
         }
+
 
 Meta Data
 -------------------------
@@ -115,7 +117,7 @@ StorageRoom without StorageRoomKit
 If you just need a small amount of content in your app and think this library is to heavy-weight you can also parse the JSON manually without StorageRoomKit. An example for this is on https://github.com/thriventures/simple_iphone_example.
 
 
-More Examples
+Usage Examples
 -------------------------
 
 See the Examples folder.

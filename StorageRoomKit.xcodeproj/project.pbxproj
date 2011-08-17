@@ -1929,7 +1929,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/StorageRoomKitCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StorageRoomKitCoreData/StorageRoomKitCoreData-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData/Private;
@@ -1944,7 +1944,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/StorageRoomKitCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StorageRoomKitCoreData/StorageRoomKitCoreData-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData/Private;
