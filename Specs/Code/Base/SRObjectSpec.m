@@ -1,0 +1,163 @@
+#import "Kiwi.h"
+#import "SRObject.h"
+
+#import "SRObject+Private.h"
+
+#import "SREntry.h"
+#import "SRAccount.h"
+#import "SRCollection.h"
+#import "SREmbedded.h"
+#import "SREntryMappingDelegate.h"
+
+SPEC_BEGIN(SRObjectSpec)
+
+describe(@"ClassMethods", ^{
+    describe(@"isCustomMapping", ^{
+        it(@"should return NO", ^{
+            [[theValue([SRObject isCustomMapping]) should] beNo];
+        });
+        
+        it(@"should return YES", ^{
+            [[theValue([SREntry isCustomMapping]) should] beYes];
+        });        
+    });
+    
+    
+    describe(@"objectType", ^{
+        it(@"should return type", ^{
+            [[[SRObject objectType] should] equal:@"Object"];
+            [[[SREntry objectType] should] equal:@"Entry"];
+        });
+    });
+
+    
+    describe(@"attributeNames", ^{
+        it(@"should return an array", ^{
+            NSArray *objectAttributeNames = [SRObject attributeNames]; 
+            [[objectAttributeNames should] beKindOfClass:[NSArray class]];
+        });
+        
+        it(@"should return names", ^{
+            NSArray *accountAttributeNames = [SRAccount attributeNames];
+            [[accountAttributeNames should] contain:@"name"];
+            [[accountAttributeNames should] contain:@"subdomain"];            
+        });
+    });
+    
+    describe(@"metaDataNames", ^{
+        it(@"should return an array", ^{
+            NSArray *metaDataNames = [SRObject metaDataNames]; 
+            [[metaDataNames should] beKindOfClass:[NSArray class]];
+        });
+        
+        it(@"should return names", ^{
+            NSArray *metaDataNames = [SRAccount metaDataNames];
+            [[metaDataNames should] contain:@"url"];
+            [[metaDataNames should] contain:@"collections_url"];            
+        });
+    });
+    
+    describe(@"relationshipNames", ^{
+        it(@"should return an array", ^{
+            NSArray *relationshipNames = [SRObject relationshipNames]; 
+            [[relationshipNames should] beKindOfClass:[NSArray class]];
+        });
+        
+        it(@"should return names", ^{
+            NSArray *relationshipNames = [SRCollection relationshipNames];
+            [[relationshipNames should] contain:@"fields"];
+        });
+    });
+    
+    describe(@"relationships", ^{
+        it(@"should return a dictionary", ^{
+            NSDictionary *relationships = [SRObject relationships]; 
+            [[relationships should] beKindOfClass:[NSDictionary class]];
+        });
+        
+        it(@"should return relationships", ^{
+            Class relationshipDescription = [[SRCollection relationships] objectForKey:@"fields"];
+            [[relationshipDescription should] equal:[SREmbedded class]];
+        });
+    });
+    
+    describe(@"propertyNames", ^{
+        it(@"should return names", ^{
+            NSArray *propertyNames = [SRCollection propertyNames];
+            [[propertyNames should] contain:@"mUrl"];
+            [[propertyNames should] contain:@"fields"];            
+            [[propertyNames should] contain:@"name"];                        
+        });
+    });
+    
+    describe(@"objectKeyPath", ^{
+        it(@"should return nil", ^{
+            [[SRObject objectKeyPath] shouldBeNil]; 
+        });
+        
+        it(@"should return path", ^{
+            [[[SRCollection objectKeyPath] should] equal:@"collection"]; 
+        });
+    });
+    
+    describe(@"isCustomMapping", ^{
+        it(@"should return YES", ^{
+            [[theValue([SRModel isCustomMapping]) should] beYes];
+            [[theValue([SREntry isCustomMapping]) should] beYes];
+            [[theValue([SREmbedded isCustomMapping]) should] beYes];            
+        });
+        
+        it(@"should return NO", ^{
+            [[theValue([SRCollection isCustomMapping]) should] beNo];
+        });
+    });
+
+
+    describe(@"object Mapping", ^{
+        it(@"should return an objectMapping", ^{
+            RKObjectMapping *mapping = (RKObjectMapping *)[SRCollection objectMapping];
+            
+            [[[mapping objectClass] should] equal:[SRCollection class]];
+            
+            NSArray *attributeMappings = [mapping attributeMappings];
+            RKObjectAttributeMapping *attributeMapping = [attributeMappings objectAtIndex:0];
+            [[[attributeMapping sourceKeyPath] should] equal:@"name"];
+            [[[attributeMapping destinationKeyPath] should] equal:@"name"];            
+            
+            RKObjectAttributeMapping *metaMapping = [attributeMappings lastObject];
+            [[[metaMapping sourceKeyPath] should] equal:@"m_entries_url"];
+            [[[metaMapping destinationKeyPath] should] equal:@"mEntriesUrl"];            
+            
+            NSArray *relationshipMappings = [mapping relationshipMappings];
+            RKObjectRelationshipMapping *relationshipMapping = [relationshipMappings objectAtIndex:0];
+            [[[relationshipMapping sourceKeyPath] should] equal:@"fields"];
+            [[[relationshipMapping destinationKeyPath] should] equal:@"fields"];
+            
+            NSObject <RKObjectMappingDefinition> *destinationMapping = [relationshipMapping mapping];
+            [[destinationMapping should] beKindOfClass:[RKObjectDynamicMapping class]];
+            
+        });
+        
+        it(@"should return a dynamic mapping", ^{
+            RKObjectDynamicMapping *dynamicMapping = (RKObjectDynamicMapping *)[SREmbedded objectMapping];
+            
+            NSDictionary *data = [NSDictionary dictionaryWithObject:@"StringField" forKey:@"m_type"];
+            
+            RKObjectMapping *stringFieldMapping = [dynamicMapping objectMappingForDictionary:data];
+            [[[stringFieldMapping objectClass] should] equal:[SRStringField class]];
+            
+        });
+        
+        it(@"should return a mapping with delegate", ^{
+            RKObjectDynamicMapping *dynamicMapping = (RKObjectDynamicMapping *)[SRModel objectMapping];
+            
+            [[dynamicMapping.delegate should] beKindOfClass:[SREntryMappingDelegate class]];
+        });
+    });
+    
+
+    
+    
+});
+
+SPEC_END
