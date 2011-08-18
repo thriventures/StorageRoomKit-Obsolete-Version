@@ -12,7 +12,11 @@
  * Class for Deleted Entries. A Deleted Entry is created when a regular Entry is deleted from the server.
  * Having this Resource is useful for synchronization.
  */
-@interface SRDeletedEntry : SRModel
+@interface SRDeletedEntry : SRModel {
+    NSString *mCollectionUrl;
+    NSString *mEntryUrl;
+    NSDate *mDeletedAt;
+}
 
 /**
  * The URL to the Collection of the Entry.

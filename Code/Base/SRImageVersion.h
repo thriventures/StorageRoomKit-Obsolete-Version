@@ -12,7 +12,12 @@
  * Definition for one image version
  */
 @interface SRImageVersion : SREmbedded {
-    
+    NSString *identifier;
+    NSString *format;
+    NSString *resizeMode;
+    NSNumber *width;
+    NSNumber *height;
+    NSNumber *scale;
 }
 
 /**

@@ -11,7 +11,6 @@
 
 @implementation SREmbedded
 
-@synthesize mType;
 
 + (BOOL)shouldRegisterInMappingProvider {
     return NO;

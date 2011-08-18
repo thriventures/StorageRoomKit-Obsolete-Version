@@ -12,7 +12,7 @@
  * Abstract Base class for all Resources that have an own URL
  */
 @interface SRResource : SRObject {
-    
+    NSString *mUrl;
 }
 
 /**

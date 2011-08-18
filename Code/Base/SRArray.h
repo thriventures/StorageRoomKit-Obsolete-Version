@@ -12,7 +12,13 @@
  * Container for many returned results.
  */
 @interface SRArray : SRResource {
-    
+    NSArray *resources;
+    NSNumber *mTotalResources;
+    NSNumber *mPages;
+    NSNumber *mPage;
+    NSNumber *mPerPage;
+    NSString *mNextPageUrl;
+    NSString *mPreviousPageUrl;
 }
 
 /**

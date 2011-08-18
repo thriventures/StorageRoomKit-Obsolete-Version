@@ -12,7 +12,9 @@
  * Abstract superclass for Model Resources
  */
 @interface SRModel : SRResource {
-    
+    NSNumber *mVersion;
+    NSDate *mCreatedAt;
+    NSDate *mUpdatedAt;
 }
 
 /**

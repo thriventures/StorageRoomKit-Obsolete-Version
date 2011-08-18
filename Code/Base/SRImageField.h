@@ -9,7 +9,9 @@
 #import "SRCompoundField.h"
 
 
-@interface SRImageField : SRCompoundField 
+@interface SRImageField : SRCompoundField {
+    NSArray *versions;
+}
     
 @property (nonatomic, retain) NSArray *versions;
 

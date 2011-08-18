@@ -12,7 +12,10 @@
  * Class for Account Resources
  */
 @interface SRAccount : SRModel {
-    
+    NSString *name;
+    NSString *subdomain;
+    NSString *mCollectionsUrl;
+    NSString *mDeletedEntriesUrl;
 }
 
 /**

@@ -13,7 +13,7 @@
  * Abstract superclass for association Fields.
  */
 @interface SRAssociationField : SRField {
-    
+    NSString *collectionUrl;
 }
 
 /**

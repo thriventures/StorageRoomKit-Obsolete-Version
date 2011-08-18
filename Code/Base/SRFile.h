@@ -12,7 +12,7 @@
  * An uploaded file of any type
  */
 @interface SRFile : SREmbedded {
-    
+    NSString *mUrl;
 }
 
 /**

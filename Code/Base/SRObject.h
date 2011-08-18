@@ -14,7 +14,9 @@
  * Abstract superclass for all StorageRoom Resources.
  *
  */
-@interface SRObject : NSObject <SRMappableObject>
+@interface SRObject : NSObject <SRMappableObject> {
+    NSString *mType;
+}
 
 /**
  * The type of the resource, mapped from "type/m_type"

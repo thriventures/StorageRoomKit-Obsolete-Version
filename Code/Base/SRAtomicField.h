@@ -12,7 +12,9 @@
  * Abstract superclass for atomic fields
  */
 @interface SRAtomicField : SRField {
-    
+    NSObject *defaultValue;
+    NSArray *choices;
+    NSNumber *includeBlankChoice;
 }
 
 /**

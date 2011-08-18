@@ -12,7 +12,8 @@
  * Image Resource with optional image versions
  */
 @interface SRImage : SREmbedded {
-    
+    NSString *mUrl;
+    NSArray *mVersions;
 }
 
 /**

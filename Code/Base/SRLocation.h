@@ -12,7 +12,8 @@
  * An embedded Location Resource
  */
 @interface SRLocation : SREmbedded {
-    
+    NSNumber *lat;
+    NSNumber *lng;
 }
 
 /**

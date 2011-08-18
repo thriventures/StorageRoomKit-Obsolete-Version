@@ -1841,6 +1841,7 @@
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = Debug;
 		};
@@ -1862,6 +1863,7 @@
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -12,7 +12,12 @@
  * Class for the Collection Resource. This Resource contains the definition of other Entry Resources.
  */
 @interface SRCollection : SRModel {
-    
+    NSString *name;
+    NSString *entryType;
+    NSString *primaryFieldIdentifier;
+    NSArray *fields;
+    NSString *mAccountUrl;
+    NSString *mEntriesUrl;
 }
 
 /**

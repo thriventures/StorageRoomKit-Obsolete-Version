@@ -8,7 +8,9 @@
 
 #import "SREmbedded.h"
 
-@interface SRAssociation : SREmbedded
+@interface SRAssociation : SREmbedded {
+    NSString *url;
+}
 
 @property (nonatomic, copy) NSString *url;
 

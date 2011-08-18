@@ -14,7 +14,18 @@
  * @see SRCollection
  */
 @interface SRField : SREmbedded {
-    
+    NSString *name;
+    NSString *identifier;
+    NSString *hint;
+    NSString *inputType;
+    NSNumber *required;
+    NSNumber *unique;
+    NSNumber *maximumLength;
+    NSNumber *minimumLength;
+    NSNumber *maximumSize;
+    NSNumber *minimumSize;
+    NSNumber *maximumNumber;
+    NSNumber *minimumNumber;
 }
 
 /**

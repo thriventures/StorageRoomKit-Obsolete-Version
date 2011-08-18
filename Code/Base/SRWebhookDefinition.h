@@ -13,12 +13,21 @@
  *
  * @see SRCollection
  */
-@interface SRWebhookDefinition : SREmbedded
+@interface SRWebhookDefinition : SREmbedded {
+    NSString *url;
+    NSString *username;
+    NSString *password;
+    NSNumber *onCreate;
+    NSNumber *onUpdate;
+    NSNumber *onDelete;
+    NSNumber *api;
+    NSNumber *webInterface;
+}
 
 /**
  * The URL the POST request will be sent to.
  */
-@property (nonatomic, retain) NSURL *url;
+@property (nonatomic, retain) NSString *url;
 
 /**
  * The HTTP basic username (optional)
