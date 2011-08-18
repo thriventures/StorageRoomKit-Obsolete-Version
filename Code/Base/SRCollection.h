@@ -16,6 +16,7 @@
     NSString *entryType;
     NSString *primaryFieldIdentifier;
     NSArray *fields;
+    NSArray *webhookDefinitions;
     NSString *mAccountUrl;
     NSString *mEntriesUrl;
 }
@@ -43,6 +44,13 @@
  * @see SRField
  */
 @property (nonatomic, retain) NSArray *fields;
+
+/**
+ * An array of all Webhook Definitions
+ *
+ * @see SRWebhookDefinition
+ */
+@property (nonatomic, retain) NSArray *webhookDefinitions;
 
 /**
  * The Url to the Account of the Collection

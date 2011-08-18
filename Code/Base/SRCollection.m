@@ -40,9 +40,9 @@ void deallocImplementation(id self, SEL _cmd) {
 }
 
 
-@implementation SRCollection // TODO_SK: spec
+@implementation SRCollection
 
-@synthesize name, entryType, primaryFieldIdentifier, fields, mAccountUrl, mEntriesUrl;
+@synthesize name, entryType, primaryFieldIdentifier, fields, webhookDefinitions, mAccountUrl, mEntriesUrl;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -63,6 +63,7 @@ void deallocImplementation(id self, SEL _cmd) {
     NSMutableDictionary *relationships = [super relationships];
     
     [relationships setObject:[SREmbedded class] forKey:@"fields"];
+    [relationships setObject:[SREmbedded class] forKey:@"webhook_definitions"];
     
     return relationships;
 }
@@ -75,6 +76,7 @@ void deallocImplementation(id self, SEL _cmd) {
     self.entryType = nil;
     self.primaryFieldIdentifier = nil;
     self.fields = nil;
+    self.webhookDefinitions = nil;
     
     self.mAccountUrl = nil;
     self.mEntriesUrl = nil;    

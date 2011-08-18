@@ -113,7 +113,7 @@ describe(@"ClassMethods", ^{
     });
 
 
-    describe(@"object Mapping", ^{
+    describe(@"objectMapping", ^{
         it(@"should return an objectMapping", ^{
             RKObjectMapping *mapping = (RKObjectMapping *)[SRCollection objectMapping];
             
@@ -129,13 +129,19 @@ describe(@"ClassMethods", ^{
             [[[metaMapping destinationKeyPath] should] equal:@"mEntriesUrl"];            
             
             NSArray *relationshipMappings = [mapping relationshipMappings];
-            RKObjectRelationshipMapping *relationshipMapping = [relationshipMappings objectAtIndex:0];
-            [[[relationshipMapping sourceKeyPath] should] equal:@"fields"];
-            [[[relationshipMapping destinationKeyPath] should] equal:@"fields"];
             
-            NSObject <RKObjectMappingDefinition> *destinationMapping = [relationshipMapping mapping];
-            [[destinationMapping should] beKindOfClass:[RKObjectDynamicMapping class]];
-            
+            for (RKObjectRelationshipMapping *relationshipMapping in relationshipMappings) {
+                NSString *sourceKeyPath = relationshipMapping.sourceKeyPath;
+                if ([sourceKeyPath isEqualToString:@"fields"]) {
+                    [[[relationshipMapping destinationKeyPath] should] equal:@"fields"];                    
+                }
+                else if ([sourceKeyPath isEqualToString:@"webhook_definitions"]) {
+                    [[[relationshipMapping destinationKeyPath] should] equal:@"webhookDefinitions"];                                        
+                }
+                
+                NSObject <RKObjectMappingDefinition> *destinationMapping = [relationshipMapping mapping];
+                [[destinationMapping should] beKindOfClass:[RKObjectDynamicMapping class]];
+            }
         });
         
         it(@"should return a dynamic mapping", ^{
@@ -151,7 +157,7 @@ describe(@"ClassMethods", ^{
         it(@"should return a mapping with delegate", ^{
             RKObjectDynamicMapping *dynamicMapping = (RKObjectDynamicMapping *)[SRModel objectMapping];
             
-            [[dynamicMapping.delegate should] beKindOfClass:[SREntryMappingDelegate class]];
+            [[[dynamicMapping.delegate class] should] equal:[SREntryMappingDelegate class]];
         });
     });
     
