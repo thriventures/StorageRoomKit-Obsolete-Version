@@ -638,6 +638,7 @@
 		53A72FBE13F9036E0046F822 /* StorageRoomKitCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageRoomKitCoreData.h; sourceTree = "<group>"; };
 		53A72FBF13F9036E0046F822 /* StorageRoomKitCoreData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StorageRoomKitCoreData.m; sourceTree = "<group>"; };
 		53A72FF613F9053C0046F822 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		53A7FD1513FC0C1F001099A2 /* NOTES */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTES; sourceTree = "<group>"; };
 		53B36C5013F902EE003B349E /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		53B6078D13E81655004F3372 /* StorageRoomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageRoomKit.h; sourceTree = "<group>"; };
 		53C8807613F01D28002D5EB5 /* SRWebhookDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebhookDefinition.h; sourceTree = "<group>"; };
@@ -700,6 +701,7 @@
 			isa = PBXGroup;
 			children = (
 				534469BB13E6CEC500807BF5 /* TODO */,
+				53A7FD1513FC0C1F001099A2 /* NOTES */,
 				5357B33313F807D000D589B1 /* Rakefile */,
 				53FF745413EC403700BDD54E /* LICENSE */,
 				53FF744713EC401C00BDD54E /* Readme.md */,
@@ -1607,7 +1609,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -pf \"${SOURCE_ROOT}/Code/StorageRoomKit.h\" \"${TARGET_BUILD_DIR}/include/StorageRoomKit\"";
+			shellScript = "cp -pf \"${SOURCE_ROOT}/Code/StorageRoomKit.h\" \"${TARGET_BUILD_DIR}/../include/StorageRoomKit\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1873,9 +1875,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
 				OTHER_LDFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/Base/Private;
+				PRIVATE_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/Base/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/StorageRoomKit/Base;
+				PUBLIC_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/Base;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1887,9 +1889,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomKit-Prefix.pch";
 				OTHER_LDFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/Base/Private;
+				PRIVATE_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/Base/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/StorageRoomKit/Base;
+				PUBLIC_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/Base;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1932,9 +1934,9 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData/Private;
+				PRIVATE_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/CoreData/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData;
+				PUBLIC_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/CoreData;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1947,9 +1949,9 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData/Private;
+				PRIVATE_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/CoreData/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/StorageRoomKit/CoreData;
+				PUBLIC_HEADERS_FOLDER_PATH = ../include/StorageRoomKit/CoreData;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
