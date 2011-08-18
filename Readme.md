@@ -29,9 +29,9 @@ Installation
 1. Open target settings editor for the target you want to link StorageRoomKit into
   * Add direct dependency on the **StorageRoomKit** aggregate target
   * Link against required frameworks:
-    * **CFNetwork.framework**
+    * **CFNetwork.framework** (iOS)
     * **CoreData.framework** (optional)
-    * **MobileCoreServices.framework**
+    * **MobileCoreServices.framework** (iOS)
     * **SystemConfiguration.framework**
     * Link against StorageRoomKit static library product:
       * **libStorageRoomKitBase.a**
