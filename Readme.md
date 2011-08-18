@@ -1,7 +1,7 @@
 StorageRoomKit
 =========================
 
-StorageRoomKit is an extension of the awesome RestKit (http://restkit.org + https://github.com/restkit/restkit) and provides helper methods and classes to make it easier to use RestKit with the StorageRoom API (http://storageroomapp.com).
+StorageRoomKit is a framework for iOS and OS X that provides helper methods and classes to make it easier to use RestKit (http://restkit.org + https://github.com/restkit/restkit) with the StorageRoom API (http://storageroomapp.com).
 
 
 Main Features
@@ -17,26 +17,28 @@ Main Features
 Installation
 -------------------------
 
-1. Add Git submodule to your project: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
-1. Check out the nested submodules (RestKit): `git submodule update --init --recursive`
+1. Load the submodules with Git
+  * Add StorageRoomKit to your project: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
+  * Check out the nested submodules (RestKit): `git submodule update --init --recursive`
 1. Add cross-project reference by dragging **StorageRoomKit.xcodeproj** to your project
 1. Open build settings editor for your project
-1. Add the following **Header Search Paths**:
-1. `"$(SOURCE_ROOT)/StorageRoomKit/Build/$(BUILD_STYLE)$(EFFECTIVE_PLATFORM_NAME)/include"`
-1. `"$(SOURCE_ROOT)/StorageRoomKit/Vendor/RestKit/Build"`
-1. Add **Other Linker Flags** for `-ObjC -all_load`
+  * Add **Other Linker Flags** for `-ObjC -all_load`
+  * Add the following **Header Search Paths**:
+    * `"$(SOURCE_ROOT)/StorageRoomKit/Build/include"`
+    * `"$(SOURCE_ROOT)/StorageRoomKit/Vendor/RestKit/Build"`
 1. Open target settings editor for the target you want to link StorageRoomKit into
-1. Add direct dependency on the **StorageRoomKit** aggregate target
-1. Link against required frameworks:
-1. **CFNetwork.framework**
-1. **CoreData.framework** (optional)
-1. **MobileCoreServices.framework**
-1. **SystemConfiguration.framework**
-1. Link against StorageRoomKit static library product:
-1. **libStorageRoomKitBase.a**
-1. **libStorageRoomKitCoreData.a** (optional)
-1. Import the StorageRoomKit headers via `#import <StorageRoomKit/StorageRoomKit.h>`
-1. Import the StorageRoomKit headers via `#import <StorageRoomKit/CoreData/CoreData.h>` (optional)
+  * Add direct dependency on the **StorageRoomKit** aggregate target
+  * Link against required frameworks:
+    * **CFNetwork.framework**
+    * **CoreData.framework** (optional)
+    * **MobileCoreServices.framework**
+    * **SystemConfiguration.framework**
+    * Link against StorageRoomKit static library product:
+      * **libStorageRoomKitBase.a**
+      * **libStorageRoomKitCoreData.a** (optional)
+1. Import the StorageRoomKit headers
+  * `#import <StorageRoomKit/StorageRoomKit.h>`
+  * `#import <StorageRoomKit/CoreData/CoreData.h>` (optional)
 1. Build the project to verify installation is successful.
 
 
@@ -81,7 +83,7 @@ This is a walkthrough with all steps for a simple usage scenario of the library.
 
         [SRObjectManager objectManagerForAccountId:@"STORAGE_ROOM_ACCOUNT_ID" authenticationToken:@"AUTHENTICATION_TOKEN"];
 
-1. Load resources from the API
+1. Work with API Resources
 
         [[RKObjectManager sharedManager] loadObjectsAtResourcePath:SRCollectionEntriesPath(@"COLLECTION_ID") delegate:self];    
 
@@ -121,7 +123,13 @@ If you just need a small amount of content in your app and think this library is
 Usage Examples
 -------------------------
 
-See the Examples folder.
+The Example folder contains detailed examples on how to use StorageRoomKit.
+
+Running Specs
+-------------------------
+
+StorageRoomKit comes with Kiwi Specs. Run the Specs with Product > Test.
+
 
 TODO
 -------------------------
