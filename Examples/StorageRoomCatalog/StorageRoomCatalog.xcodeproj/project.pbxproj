@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533E23851409027B00E02F88 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53456C7C13F7CED5005DEA18 /* MainWindow.xib */; };
+		533E23861409027E00E02F88 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53456C7D13F7CED5005DEA18 /* RootViewController.xib */; };
 		533E49F913E82DBC00EFEAA9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 533E49F813E82DBC00EFEAA9 /* Constants.m */; };
 		53456C7E13F7CED5005DEA18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53456C7C13F7CED5005DEA18 /* MainWindow.xib */; };
 		53456C7F13F7CED5005DEA18 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53456C7D13F7CED5005DEA18 /* RootViewController.xib */; };
@@ -205,7 +207,7 @@
 		53B607A613E81B9C004F3372 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		53B607A713E81B9C004F3372 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		53B607A813E81B9C004F3372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		53BC37C513F565E100AC8CCB /* StorageRoomCatalog copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StorageRoomCatalog copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BC37C513F565E100AC8CCB /* SRGenerateSeedDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRGenerateSeedDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BC37C813F567A600AC8CCB /* articles_export.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles_export.json; sourceTree = "<group>"; };
 		53C8802013EFB8C0002D5EB5 /* NSManagedObjectExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSManagedObjectExampleViewController.h; sourceTree = "<group>"; };
 		53C8802113EFB8C0002D5EB5 /* NSManagedObjectExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectExampleViewController.m; sourceTree = "<group>"; };
@@ -321,7 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				536E501E13E7F4B80055FD06 /* StorageRoomCatalog.app */,
-				53BC37C513F565E100AC8CCB /* StorageRoomCatalog copy.app */,
+				53BC37C513F565E100AC8CCB /* SRGenerateSeedDb.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -556,9 +558,9 @@
 			productReference = 536E501E13E7F4B80055FD06 /* StorageRoomCatalog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		53BC378613F565E100AC8CCB /* Gemerate Seed Database */ = {
+		53BC378613F565E100AC8CCB /* Generate Seed Database */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53BC37C213F565E100AC8CCB /* Build configuration list for PBXNativeTarget "Gemerate Seed Database" */;
+			buildConfigurationList = 53BC37C213F565E100AC8CCB /* Build configuration list for PBXNativeTarget "Generate Seed Database" */;
 			buildPhases = (
 				53BC378913F565E100AC8CCB /* Sources */,
 				53BC37A513F565E100AC8CCB /* Frameworks */,
@@ -569,9 +571,9 @@
 			dependencies = (
 				53A72FE813F904500046F822 /* PBXTargetDependency */,
 			);
-			name = "Gemerate Seed Database";
+			name = "Generate Seed Database";
 			productName = StorageRoomCatalog;
-			productReference = 53BC37C513F565E100AC8CCB /* StorageRoomCatalog copy.app */;
+			productReference = 53BC37C513F565E100AC8CCB /* SRGenerateSeedDb.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -598,7 +600,7 @@
 			projectRoot = "";
 			targets = (
 				536E501D13E7F4B80055FD06 /* StorageRoomCatalog */,
-				53BC378613F565E100AC8CCB /* Gemerate Seed Database */,
+				53BC378613F565E100AC8CCB /* Generate Seed Database */,
 			);
 		};
 /* End PBXProject section */
@@ -674,6 +676,8 @@
 				53BC37C013F565E100AC8CCB /* Icon.png in Resources */,
 				53BC37C113F565E100AC8CCB /* SeededDataExampleViewController.xib in Resources */,
 				53BC37C913F567A600AC8CCB /* articles_export.json in Resources */,
+				533E23851409027B00E02F88 /* MainWindow.xib in Resources */,
+				533E23861409027E00E02F88 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,7 +884,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "StorageRoomCatalog-Info.plist";
-				PRODUCT_NAME = "StorageRoomCatalog copy";
+				PRODUCT_NAME = SRGenerateSeedDb;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -892,7 +896,7 @@
 				GCC_PREFIX_HEADER = "Code/StorageRoomCatalog-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "StorageRoomCatalog-Info.plist";
-				PRODUCT_NAME = "StorageRoomCatalog copy";
+				PRODUCT_NAME = SRGenerateSeedDb;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -918,7 +922,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53BC37C213F565E100AC8CCB /* Build configuration list for PBXNativeTarget "Gemerate Seed Database" */ = {
+		53BC37C213F565E100AC8CCB /* Build configuration list for PBXNativeTarget "Generate Seed Database" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53BC37C313F565E100AC8CCB /* Debug */,
