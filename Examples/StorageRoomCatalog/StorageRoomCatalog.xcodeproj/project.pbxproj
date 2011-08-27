@@ -37,6 +37,7 @@
 		5388B15C13F53D2300045619 /* SeededDataExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5388B15A13F53D2300045619 /* SeededDataExampleViewController.m */; };
 		5388B15D13F53D2300045619 /* SeededDataExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5388B15B13F53D2300045619 /* SeededDataExampleViewController.xib */; };
 		5388B16013F5414C00045619 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 5388B15F13F5414C00045619 /* Article.m */; };
+		539AC781140904B9000DF9A8 /* GenerateSeedDb-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 539AC780140904B9000DF9A8 /* GenerateSeedDb-Info.plist */; };
 		53A6404713ED728300B6BE93 /* NSObjectExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A6404613ED728300B6BE93 /* NSObjectExampleViewController.m */; };
 		53A6404913ED72A400B6BE93 /* NSObjectExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A6404813ED72A400B6BE93 /* NSObjectExampleViewController.xib */; };
 		53A72FE913F9045F0046F822 /* libStorageRoomKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A72FE313F9041F0046F822 /* libStorageRoomKitCoreData.a */; };
@@ -199,6 +200,7 @@
 		5388B15B13F53D2300045619 /* SeededDataExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SeededDataExampleViewController.xib; path = ../Resources/SeededDataExampleViewController.xib; sourceTree = "<group>"; };
 		5388B15E13F5414C00045619 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
 		5388B15F13F5414C00045619 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		539AC780140904B9000DF9A8 /* GenerateSeedDb-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerateSeedDb-Info.plist"; sourceTree = "<group>"; };
 		53A6404313ED6DF100B6BE93 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		53A6404513ED728300B6BE93 /* NSObjectExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExampleViewController.h; sourceTree = "<group>"; };
 		53A6404613ED728300B6BE93 /* NSObjectExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectExampleViewController.m; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				53456C8113F7CEE9005DEA18 /* StorageRoomCatalog-Info.plist */,
+				539AC780140904B9000DF9A8 /* GenerateSeedDb-Info.plist */,
 				53456C8013F7CEE9005DEA18 /* InfoPlist.strings */,
 				53EA67B413F6B81E00179748 /* RKSeedDatabase.sqlite */,
 				53BC37C813F567A600AC8CCB /* articles_export.json */,
@@ -678,6 +681,7 @@
 				53BC37C913F567A600AC8CCB /* articles_export.json in Resources */,
 				533E23851409027B00E02F88 /* MainWindow.xib in Resources */,
 				533E23861409027E00E02F88 /* RootViewController.xib in Resources */,
+				539AC781140904B9000DF9A8 /* GenerateSeedDb-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,7 +887,7 @@
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "StorageRoomCatalog-Info.plist";
+				INFOPLIST_FILE = "GenerateSeedDb-Info.plist";
 				PRODUCT_NAME = SRGenerateSeedDb;
 				WRAPPER_EXTENSION = app;
 			};
@@ -895,7 +899,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/StorageRoomCatalog-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "StorageRoomCatalog-Info.plist";
+				INFOPLIST_FILE = "GenerateSeedDb-Info.plist";
 				PRODUCT_NAME = SRGenerateSeedDb;
 				WRAPPER_EXTENSION = app;
 			};
