@@ -801,7 +801,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SOURCE_ROOT)/../../Build/$(BUILD_STYLE)-$(PLATFORM_NAME)/include\"",
+					"\"$(SOURCE_ROOT)/../../Build/include\"",
 					"\"$(SOURCE_ROOT)/../../Vendor/RestKit/Build\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -828,7 +828,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SOURCE_ROOT)/../../Build/$(BUILD_STYLE)-$(PLATFORM_NAME)/include\"",
+					"\"$(SOURCE_ROOT)/../../Build/include\"",
 					"\"$(SOURCE_ROOT)/../../Vendor/RestKit/Build\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
