@@ -1607,7 +1607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -pf \"${SOURCE_ROOT}/Code/StorageRoomKit.h\" \"${TARGET_BUILD_DIR}/../include/StorageRoomKit\"";
+			shellScript = "cp -pf \"${SOURCE_ROOT}/Code/StorageRoomKit.h\" \"${BUILD_DIR}/include/StorageRoomKit\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

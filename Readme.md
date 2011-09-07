@@ -1,11 +1,11 @@
 StorageRoomKit
-=========================
+==============================
 
 StorageRoomKit is a framework for iOS and OS X that provides helper methods and classes to make it easier to use RestKit (http://restkit.org + https://github.com/restkit/restkit) with the StorageRoom API (http://storageroomapp.com).
 
 
 Main Features
--------------------------
+------------------------------
 
 * Works with NSObjects and NSManagedObjects
 * Supports the GET, POST, PUT and DELETE HTTP methods
@@ -14,11 +14,12 @@ Main Features
 * ... and many more handy features that RestKit offers
 
 
-Installation
--------------------------
+Installation into your Project
+------------------------------
 
 1. Load the submodules with Git
   * Add StorageRoomKit to your project: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
+  * Go to the StorageRoomKit directory: `cd StorageRoomKit`
   * Check out the nested submodules (RestKit): `git submodule update --init --recursive`
 1. Add cross-project reference by dragging **StorageRoomKit.xcodeproj** to your project
 1. Open build settings editor for your project
@@ -42,8 +43,19 @@ Installation
 1. Build the project to verify installation is successful.
 
 
+Run the Catalog Demo App
+------------------------------
+
+1. Initialize the repository with Git
+  * Clone StorageRoomKit: `git clone git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
+  * Go to the StorageRoomKit directory: `cd StorageRoomKit`
+  * Check out the nested submodules (RestKit): `git submodule update --init --recursive`
+1. Open the StorageRoomCatalog Xcode project in Examples/StorageRoomCatalog
+1. Run the StorageRoomCatalog scheme
+
+
 Basic Usage
--------------------------
+------------------------------
 
 
 This is a walkthrough with all steps for a simple usage scenario of the library.
@@ -95,7 +107,7 @@ This is a walkthrough with all steps for a simple usage scenario of the library.
 
 
 Meta Data
--------------------------
+------------------------------
 
 The JSON representations of Resources in the StorageRoom API contain meta data attributes that are prefixed with an "@" character. An example for this is the 
 "@created_at" meta data attribute, which shows the time at which a Resource was created on the server.
@@ -107,7 +119,7 @@ but you are not required to.
 
 
 Documentation
--------------------------
+------------------------------
 
 Run "rake docs:install" to generate the AppleDoc from the source files and install it into Xcode.
 
@@ -115,36 +127,36 @@ The StorageRoom API Documentation (http://storageroomapp.com/developers) contain
 
 
 StorageRoom without StorageRoomKit
--------------------------
+------------------------------
 
 If you just need a small amount of content in your app and think this library is to heavy-weight you can also parse the JSON manually without StorageRoomKit. An example for this is on https://github.com/thriventures/simple_iphone_example.
 
 
 Usage Examples
--------------------------
+------------------------------
 
 The Example folder contains detailed examples on how to use StorageRoomKit.
 
 Running Specs
--------------------------
+------------------------------
 
 StorageRoomKit comes with Kiwi Specs. Run the Specs with Product > Test.
 
 
 TODO
--------------------------
+------------------------------
 
 Please refer to TODO file.
 
 
 Bugs and Feedback
--------------------------
+------------------------------
 
 Please create an issue on GitHub if you discover any bugs.
 
 http://github.com/thriventures/StorageRoomKit/issues
 
 License
--------------------------
+------------------------------
 
 MIT License. Copyright 2011 Thriventures UG (haftungsbeschränkt) - http://www.thriventures.com
