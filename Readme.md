@@ -25,8 +25,7 @@ Installation into your Project
 1. Open build settings editor for your project
   * Add **Other Linker Flags** for `-ObjC -all_load`
   * Add the following **Header Search Paths**:
-    * `"$(SOURCE_ROOT)/StorageRoomKit/Build/include"`
-    * `"$(SOURCE_ROOT)/StorageRoomKit/Vendor/RestKit/Build"`
+    * `"$(BUILD_DIR)/include"`
 1. Open target settings editor for the target you want to link StorageRoomKit into
   * Add direct dependency on the **StorageRoomKit** aggregate target
   * Link against required frameworks:
