@@ -19,7 +19,6 @@ Installation into your Project
 
 1. Load the submodules with Git
   * Add StorageRoomKit to your project: `git submodule add git://github.com/thriventures/StorageRoomKit.git StorageRoomKit`
-  * Go to the StorageRoomKit directory: `cd StorageRoomKit`
   * Check out the nested submodules (RestKit): `git submodule update --init --recursive`
 1. Add cross-project reference by dragging **StorageRoomKit.xcodeproj** to your project
 1. Open build settings editor for your project
