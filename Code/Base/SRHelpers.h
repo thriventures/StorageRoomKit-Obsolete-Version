@@ -68,7 +68,7 @@ NSString *SRMeta(NSString *aName);
 /**
  * Returns the string with an added operator.
  */
-NSString *SRAppendOperator(NSString *base, NSString *operator);
+NSString *SRAppendOperator(NSString *base, NSString *op);
 
 /**
  * The identifier of the attribute that contains the type information.

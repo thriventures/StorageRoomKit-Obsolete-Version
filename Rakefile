@@ -7,7 +7,7 @@ def storageroomkit_version
 end
 
 def storageroomkit_version_from_file
-  File.read("Code/SRObjectManager.m").each_line do |line|
+  File.read("Code/Base/SRObjectManager.m").each_line do |line|
     if line =~ /#define kCurrentVersion @"(.*)"/
       return $1
     end

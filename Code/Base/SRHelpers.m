@@ -73,8 +73,8 @@ NSString *SRMeta(NSString *aName) {
     return [NSString stringWithFormat:@"%@%@", [SRObjectManager metaPrefix], aName];
 }
 
-NSString *SRAppendOperator(NSString *base, NSString *operator) {
-    return [NSString stringWithFormat:@"%@!%@", base, operator];
+NSString *SRAppendOperator(NSString *base, NSString *op) {
+    return [NSString stringWithFormat:@"%@!%@", base, op];
 }
 
 NSString *SRTypeAttribute(void) { 
