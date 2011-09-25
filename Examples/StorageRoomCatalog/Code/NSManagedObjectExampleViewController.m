@@ -27,7 +27,8 @@
     
     SRObjectManager *objectManager = [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];
     objectManager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"RestaurantData.sqlite" usingSeedDatabaseName:nil managedObjectModel:nil delegate:self];
-            
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+  
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadButtonTapped)] autorelease];
     
     if (![self.restaurants count]) {

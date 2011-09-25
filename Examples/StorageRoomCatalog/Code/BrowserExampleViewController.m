@@ -21,8 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];   
-    
+    SRObjectManager *manager = [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];   
+    manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+  
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadButtonTapped)] autorelease];
     
     [self reloadButtonTapped];

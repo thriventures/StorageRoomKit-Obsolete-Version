@@ -89,8 +89,7 @@
     [SRObjectManager clearEntryObjectMappings];
     [RKClient setSharedClient:nil];    
     [SRObjectManager setSharedManager:nil];
-    [RKRequestQueue setSharedQueue:nil];
-    [RKRequestQueue sharedQueue].showsNetworkActivityIndicatorWhenBusy = YES;
+
     
     NSString *exampleName = [self.cellTitles objectAtIndex:indexPath.row];
     NSString *fullName = [exampleName stringByAppendingString:@"ExampleViewController"];

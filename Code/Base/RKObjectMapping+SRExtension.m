@@ -8,7 +8,7 @@
 
 #import "RKObjectMapping+SRExtension.h"
 
-#import <RestKit/Support/NSString+InflectionSupport.h>
+#import "NSString+InflectionSupport.h"
 
 #import "SREmbedded.h"
 

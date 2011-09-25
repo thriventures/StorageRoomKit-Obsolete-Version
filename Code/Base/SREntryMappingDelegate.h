@@ -11,7 +11,7 @@
  *
  * @see SRObjectManager
  */
-@interface SREntryMappingDelegate : NSObject <RKObjectDynamicMappingDelegate>
+@interface SREntryMappingDelegate : NSObject <RKDynamicObjectMappingDelegate>
 
 
 @end

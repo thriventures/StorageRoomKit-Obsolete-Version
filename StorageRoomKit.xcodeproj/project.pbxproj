@@ -217,6 +217,8 @@
 		537FB3E813F2A41D00CE8A35 /* SRRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 537FB3E613F2A41900CE8A35 /* SRRouter.m */; };
 		537FB3EB13F2AE2800CE8A35 /* SRRouterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 537FB3EA13F2AE2700CE8A35 /* SRRouterSpec.m */; };
 		5388B14413F50CDE00045619 /* SRObjectManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5388B14113F50BC500045619 /* SRObjectManagerSpec.m */; };
+		538CF42A142F3F9D00380514 /* NSString+InflectionSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 538CF428142F3F9D00380514 /* NSString+InflectionSupport.h */; };
+		538CF42B142F3F9D00380514 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 538CF429142F3F9D00380514 /* NSString+InflectionSupport.m */; };
 		5396045F13F7BF0A00F9E4D7 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5396045313F7BE3700F9E4D7 /* libRestKitJSONParserJSONKit.a */; };
 		5396046013F7BF0A00F9E4D7 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5396044713F7BE3700F9E4D7 /* libRestKitNetwork.a */; };
 		5396046113F7BF0A00F9E4D7 /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5396044913F7BE3700F9E4D7 /* libRestKitObjectMapping.a */; };
@@ -633,6 +635,8 @@
 		537FB3E613F2A41900CE8A35 /* SRRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRouter.m; sourceTree = "<group>"; };
 		537FB3EA13F2AE2700CE8A35 /* SRRouterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRouterSpec.m; sourceTree = "<group>"; };
 		5388B14113F50BC500045619 /* SRObjectManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRObjectManagerSpec.m; sourceTree = "<group>"; };
+		538CF428142F3F9D00380514 /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectionSupport.h"; sourceTree = "<group>"; };
+		538CF429142F3F9D00380514 /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectionSupport.m"; sourceTree = "<group>"; };
 		53A72FB913F9036E0046F822 /* libStorageRoomKitCoreData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStorageRoomKitCoreData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A72FBD13F9036E0046F822 /* StorageRoomKitCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StorageRoomKitCoreData-Prefix.pch"; sourceTree = "<group>"; };
 		53A72FBE13F9036E0046F822 /* StorageRoomKitCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageRoomKitCoreData.h; sourceTree = "<group>"; };
@@ -961,6 +965,8 @@
 			children = (
 				534E216013EC199C00C4D9DA /* RKObjectMapping+SRExtension.h */,
 				534E216113EC199C00C4D9DA /* RKObjectMapping+SRExtension.m */,
+				538CF428142F3F9D00380514 /* NSString+InflectionSupport.h */,
+				538CF429142F3F9D00380514 /* NSString+InflectionSupport.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1294,14 +1300,14 @@
 				5396044713F7BE3700F9E4D7 /* libRestKitNetwork.a */,
 				5396044913F7BE3700F9E4D7 /* libRestKitObjectMapping.a */,
 				5396044B13F7BE3700F9E4D7 /* libRestKitSupport.a */,
-				5396044D13F7BE3700F9E4D7 /* libRestKitJSONParser+NXJSON.a */,
+				5396044D13F7BE3700F9E4D7 /* libRestKitJSONParserNXJSON.a */,
 				5396044F13F7BE3700F9E4D7 /* libRestKitJSONParserYAJL.a */,
 				5396045113F7BE3700F9E4D7 /* libRestKitJSONParserSBJSON.a */,
 				5396045313F7BE3700F9E4D7 /* libRestKitJSONParserJSONKit.a */,
 				5396045513F7BE3700F9E4D7 /* libRestKitXMLParserLibxml.a */,
 				5396045713F7BE3700F9E4D7 /* libRestKitCoreData.a */,
 				5396045913F7BE3700F9E4D7 /* libRestKitThree20.a */,
-				5396045B13F7BE3700F9E4D7 /* UISpec.app */,
+				5396045B13F7BE3700F9E4D7 /* RestKitSpecs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1388,6 +1394,7 @@
 				536003C713F90D160045266F /* Base.h in Headers */,
 				536003EA13F919B00045266F /* SRHelpers.h in Headers */,
 				532DEF2313FA8C840006ADD0 /* SREntry+Private.h in Headers */,
+				538CF42A142F3F9D00380514 /* NSString+InflectionSupport.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1511,10 +1518,9 @@
 			remoteRef = 5396044A13F7BE3700F9E4D7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5396044D13F7BE3700F9E4D7 /* libRestKitJSONParser+NXJSON.a */ = {
+		5396044D13F7BE3700F9E4D7 /* libRestKitJSONParserNXJSON.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = "libRestKitJSONParser+NXJSON.a";
 			path = libRestKitJSONParserNXJSON.a;
 			remoteRef = 5396044C13F7BE3700F9E4D7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1561,10 +1567,10 @@
 			remoteRef = 5396045813F7BE3700F9E4D7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5396045B13F7BE3700F9E4D7 /* UISpec.app */ = {
+		5396045B13F7BE3700F9E4D7 /* RestKitSpecs.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = UISpec.app;
+			path = RestKitSpecs.app;
 			remoteRef = 5396045A13F7BE3700F9E4D7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1655,6 +1661,7 @@
 				5371B65C13F3E5EA00FD73FC /* SRObjectMappingProvider.m in Sources */,
 				5371B66D13F3E84C00FD73FC /* SRObjectManager.m in Sources */,
 				5371B68F13F428D100FD73FC /* SRDeletedEntry.m in Sources */,
+				538CF42B142F3F9D00380514 /* NSString+InflectionSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

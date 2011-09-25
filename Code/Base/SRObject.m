@@ -112,7 +112,7 @@
         delegate = [[SREntryMappingDelegate alloc] init];
     }
     
-    RKObjectDynamicMapping *mapping = (RKObjectDynamicMapping *)[self dynamicMapping];
+    RKDynamicObjectMapping *mapping = (RKDynamicObjectMapping *)[self dynamicMapping];
     mapping.delegate = delegate;
     
     return mapping;

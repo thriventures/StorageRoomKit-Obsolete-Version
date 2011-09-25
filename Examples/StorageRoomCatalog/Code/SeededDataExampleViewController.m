@@ -29,7 +29,8 @@
     
     SRObjectManager *objectManager = [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];
     objectManager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"ArticleData.sqlite" usingSeedDatabaseName:RKDefaultSeedDatabaseFileName managedObjectModel:nil delegate:self];
-    
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+  
     [self reloadTableView];
     
     RKLogDebug(@"Last synchonization was at: %@", self.lastSynchronizationDate);

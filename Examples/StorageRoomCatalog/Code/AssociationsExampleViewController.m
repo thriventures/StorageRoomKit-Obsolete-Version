@@ -24,8 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];
-    [RKRequestQueue sharedQueue].showsNetworkActivityIndicatorWhenBusy = YES;
+    SRObjectManager *manager = [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationToken ssl:NO];
+    manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     
     [self resetTableView];
     

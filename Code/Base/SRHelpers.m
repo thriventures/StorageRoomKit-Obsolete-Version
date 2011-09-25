@@ -9,7 +9,7 @@
 #import "SRHelpers.h"
 
 #import "objc/runtime.h"
-#import <RestKit/Support/NSString+InflectionSupport.h>
+#import "NSString+InflectionSupport.h"
 
 #undef RKLogComponent
 #define RKLogComponent lcl_cStorageRoomKit

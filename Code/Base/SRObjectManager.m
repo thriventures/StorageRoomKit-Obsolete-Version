@@ -13,7 +13,7 @@
 #import "objc/runtime.h"
 #import "SRMappableObject.h"
 
-#import <RestKit/Support/NSString+InflectionSupport.h>
+#import "NSString+InflectionSupport.h"
 #import <RestKit/ObjectMapping/RKErrorMessage.h>
 
 #import "SREntryProtocol.h"
@@ -182,7 +182,7 @@ static NSString *defaultHost = @"api.storageroomapp.com";
         
         self.client.username = anAuthenticationToken;
         self.client.password = @"";
-        self.client.forceBasicAuthentication = YES;
+        self.client.authenticationType = RKRequestAuthenticationTypeHTTPBasic;
         [self.client setValue:[[self class] metaPrefix] forHTTPHeaderField:@"X-Meta-Prefix"]; // use m_ as meta prefix and not @, as this causes problems with KVC
         [self.client setValue:[[self class] userAgent] forHTTPHeaderField:@"User-Agent"];
         

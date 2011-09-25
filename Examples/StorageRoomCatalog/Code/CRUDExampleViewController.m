@@ -20,8 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationTokenWithWriteAccess ssl:NO];
-    
+    SRObjectManager *manager = [SRObjectManager objectManagerForAccountId:SRAccountID authenticationToken:SRAuthenticationTokenWithWriteAccess ssl:NO];
+    manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+  
     [self refreshView];
 }
 

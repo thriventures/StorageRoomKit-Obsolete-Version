@@ -108,7 +108,7 @@ describe(@"objectManagerForAccountId:authenticationToken:ssl:host:", ^{
         [[objectManager.client.username should] equal:@"token"];
         [[objectManager.client.password should] equal:@""];
         
-        [[theValue(objectManager.client.forceBasicAuthentication) should] beYes];
+        [[theValue(objectManager.client.authenticationType) should] equal:theValue(RKRequestAuthenticationTypeHTTPBasic)];
         
         [[[[objectManager.client HTTPHeaders] objectForKey:@"X-Meta-Prefix"] should] equal:[SRObjectManager metaPrefix]];
         [[[[objectManager.client HTTPHeaders] objectForKey:@"User-Agent"] should] equal:[SRObjectManager userAgent]];            
@@ -137,7 +137,7 @@ describe(@"objectManagerForAccountId:authenticationToken:", ^{
         [[objectManager.client.username should] equal:@"token"];
         [[objectManager.client.password should] equal:@""];
         
-        [[theValue(objectManager.client.forceBasicAuthentication) should] beYes];
+        [[theValue(objectManager.client.authenticationType) should] equal:theValue(RKRequestAuthenticationTypeHTTPBasic)];
         
         [[[[objectManager.client HTTPHeaders] objectForKey:@"X-Meta-Prefix"] should] equal:[SRObjectManager metaPrefix]];
         [[[[objectManager.client HTTPHeaders] objectForKey:@"User-Agent"] should] equal:[SRObjectManager userAgent]];            
