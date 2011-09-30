@@ -1,6 +1,9 @@
 StorageRoomKit
 ==============================
 
+** Notice: This library is now obsolete. Two independent Xcode projects caused a lot of trouble, especially when building for the App Store (archiving). We decided to move the library code into our own fork of RestKit, which makes integration a lot easier. Please use this fork instead: https://github.com/thriventures/StorageRoomKit. The code in your application can stay the same, you just have to change the library. **
+
+
 StorageRoomKit is a framework for iOS and OS X that provides helper methods and classes to make it easier to use RestKit (http://restkit.org + https://github.com/restkit/restkit) with the StorageRoom API (http://storageroomapp.com).
 
 
